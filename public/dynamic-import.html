@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>使用SystemJS动态加载依赖lodash的js文件</title>
+  <script src="system.js"></script>
+</head>
+
+<body>
+  <a href="/">返回</a>
+  <p></p>
+</body>
+<script>
+  //alert(_.add(1,2))
+  SystemJS.config({
+    map: {
+      lodash: 'https://unpkg.com/lodash@4.17.10/lodash.js'
+    }
+  })
+  SystemJS.import('./bundle.js');
+</script>
+</html>

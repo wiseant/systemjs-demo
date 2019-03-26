@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SystemJS 示例</title>
+</head>
+
+<body>
+</body>
+
+<script type="systemjs-importmap">
+{
+  "imports": {
+    "lodash": "https://unpkg.com/lodash@4.17.10/lodash.js"
+  }
+}
+</script>
+<!-- Alternatively:
+<script type="systemjs-importmap" src="path/to/map.json">
+-->
+<!-- SystemJS must be loaded after the import map -->
+<script src="system.js"></script>
+<script>
+  System.import('./bundle.js');
+</script>
+</html>
